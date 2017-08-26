@@ -26,12 +26,12 @@ public class Letters : MonoBehaviour {
 			if (GetComponent<Renderer>().materials[0].color != WordSearch.Instance.identifiedTint) {
 				GetComponent<Renderer>().materials[0].color = WordSearch.Instance.identifiedTint;
 			} 
-			return;
+			//return;
         }
 
         if (Input.GetMouseButtonUp(0)) {
             utilized = false;
-			if (GetComponent<Renderer>().materials[0].color != WordSearch.Instance.defaultTint) {
+			if (!identified && GetComponent<Renderer>().materials[0].color != WordSearch.Instance.defaultTint) {
 				GetComponent<Renderer>().materials[0].color = WordSearch.Instance.defaultTint;
 			}
         }
