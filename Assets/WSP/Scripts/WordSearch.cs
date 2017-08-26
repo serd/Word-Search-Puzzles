@@ -221,7 +221,8 @@ public class WordSearch : MonoBehaviour {
 		}
 	
         for (int i = 0; i < word.Length; i++) {
-			if (!string.IsNullOrEmpty (matrix [(i * directionX) + row, (i * directionY) + column])) {
+			var letter = matrix [(i * directionX) + row, (i * directionY) + column];
+			if (!string.IsNullOrEmpty(letter) && letter != word[i].ToString()) {
 				return false;
 			}
         }
